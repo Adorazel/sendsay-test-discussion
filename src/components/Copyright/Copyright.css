@@ -1,0 +1,12 @@
+a:not(.btn).login__github-link {
+    color: var(--gray);
+    display: inline-block;
+    border-bottom: 1px solid transparent;
+    transition: border .25s, filter .25s, color .25s;
+}
+
+a:not(.btn).login__github-link:hover {
+    color: var(--blue);
+    text-decoration: none;
+    border-color: currentColor;
+}

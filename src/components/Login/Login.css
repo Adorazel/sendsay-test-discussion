@@ -1,0 +1,104 @@
+.login {
+    width: calc(520px + 3rem);
+    max-width: 100%;
+    margin: auto;
+    padding: 2.5rem 1.5rem;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__logo {
+    margin-bottom: 1.25rem;
+}
+
+.login__form {
+    width: 100%;
+    min-height: 425px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background: white;
+    padding: 2.5rem 1.875rem;
+    margin-bottom: 1.25rem;
+}
+
+.login__form-title {
+    font-size: calc(var(--font-size-base) * 1.5);
+    margin-bottom: 1.25rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+
+.login__form-control {
+    display: block;
+    width: 100%;
+    height: 2.5rem;
+    padding: .25rem .5rem;
+    font-family: var(--font-family-sans-serif);
+    font-size: var(--font-size-base);
+    font-weight: 400;
+    line-height: 1;
+    color: var(--black);
+    background-color: white;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    transition: border .25s, box-shadow .25s;
+}
+
+.login__form-control::placeholder {
+    color: var(--gray);
+    opacity: 1;
+}
+
+.login__form-control:hover {
+    border-color: rgba(0, 0, 0, .4);
+}
+
+.login__form-control:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, .2);
+}
+
+.login__form-control:disabled {
+    background-color: var(--gray-light);
+    opacity: 1;
+}
+
+.login__form-group {
+    margin-bottom: 1.25rem;
+}
+
+.login__label-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.login__label-group label,
+.login__label-group .login__optional-item {
+    display: inline-block;
+    line-height: 1.25;
+    margin-bottom: .3125rem;
+}
+
+.login__label-group .login__optional-item {
+    color: var(--gray);
+    font-size: .75rem;
+}
+
+.login__form-group.login__form-group--error .login__form-control {
+    border-color: var(--danger);
+}
+
+.login__form-group.login__form-group--error .login__form-control:focus {
+    box-shadow: 0 0 0 2px rgba(207, 44, 0, .2);
+}
+
+.login__form-group.login__form-group--error label {
+    color: var(--danger);
+}
