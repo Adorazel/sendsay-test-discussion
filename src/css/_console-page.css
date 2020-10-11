@@ -1,0 +1,11 @@
+.console__page {
+    min-width: 640px;
+    min-height: 520px;
+    height: 100vh;
+    background: white;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+}

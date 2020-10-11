@@ -1,0 +1,125 @@
+.history {
+    --padding: .594rem;
+    background-color: var(--gray-light);
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    overflow: hidden;
+    height: calc(1.875rem + (var(--padding) * 2) + 1px);
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.history__scroll--horizontal {
+    padding-bottom: 100px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    flex-shrink: 1;
+    position: relative;
+    width: 100%;
+}
+
+.history__scroll--horizontal::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 1rem;
+    background: linear-gradient(to right, var(--gray-light), transparent);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.history__trash {
+    padding: .625rem .6875rem;
+    position: relative;
+    z-index: 1;
+    border-left: 1px solid rgba(0, 0, 0, .2);
+}
+
+.history__trash::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: calc(100% + 1px);
+    width: 1rem;
+    background: linear-gradient(to left, var(--gray-light), transparent);
+    pointer-events: none;
+}
+
+.history__trash .btn .icon {
+    display: block;
+}
+
+.history__scroll-content {
+    display: flex;
+    padding: var(--padding) .9375rem;
+    position: relative;
+    transition: left .3s ease-in-out;
+    height: calc(1.875rem + (var(--padding) * 2));
+}
+
+.history--empty {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.history__item {
+    margin-right: .625rem;
+    position: relative;
+}
+
+.history__item .btn-toggle:first-child {
+    z-index: 2;
+}
+
+.history__item-copied {
+    display: none;
+}
+
+.history__item-copied-enter {
+    display: block;
+    position: absolute;
+    top: .25rem;
+    left: .25rem;
+    right: -1.5rem;
+    background: var(--gray-light);
+    padding: .25rem .125rem .375rem;
+    font-size: .75rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border-radius: 5px;
+    transition: opacity .5s, margin .5s;
+    will-change: opacity, margin;
+}
+
+.history__item-copied-enter-active {
+    opacity: 0;
+    margin-top: -20px;
+}
+
+.history__item-copied-enter-done {
+    display: none;
+}
+
+.request-dot {
+    display: inline-block;
+    margin-right: .3125rem;
+    width: .625rem;
+    height: .625rem;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.request-dot-success {
+    background: var(--success);
+}
+
+.request-dot-danger {
+    background: var(--danger);
+}
